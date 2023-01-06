@@ -40,3 +40,8 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^^^^^^^^^^
 jinja2.exceptions.UndefinedError: 'form' is undefined
 2023-01-05 19:31:38,424 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
+2023-01-05 19:34:59,897 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
+2023-01-05 19:49:26,069 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
+2023-01-05 19:58:31,181 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
+2023-01-05 20:01:41,114 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
+2023-01-05 20:09:46,663 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
