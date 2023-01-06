@@ -67,8 +67,8 @@ def register():
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     posts = current_user.posts.all()
-
-    return render_template('user.html', user=user, posts=posts)
+    form = EmptyForm()
+    return render_template('user.html', user=user, posts=posts, form=form)
 
 
 @app.before_request

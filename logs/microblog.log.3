@@ -1,4 +1,4 @@
-2023-01-03 18:37:12,498 ERROR: Exception on /index [GET] [in C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1741]
+2023-01-03 18:37:34,612 ERROR: Exception on /index [GET] [in C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1741]
 Traceback (most recent call last):
   File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -43,7 +43,8 @@ Traceback (most recent call last):
     if hasattr(obj, "jinja_pass_arg"):
        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'avatar'
-2023-01-03 18:37:12,757 ERROR: Exception on /index [GET] [in C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1741]
+2023-01-03 18:39:48,277 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
+2023-01-03 18:39:56,918 ERROR: Exception on /index [GET] [in C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1741]
 Traceback (most recent call last):
   File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -88,3 +89,25 @@ Traceback (most recent call last):
     if hasattr(obj, "jinja_pass_arg"):
        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'avatar'
+2023-01-03 18:40:51,284 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
+2023-01-03 18:41:21,604 ERROR: Exception on /user/susan [GET] [in C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\routes.py", line 78, in user
+    posts = current_user.followed_posts.all()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'all'
