@@ -1,15 +1,4 @@
-2023-01-02 23:03:35,566 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:46]
-2023-01-02 23:04:02,034 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
-2023-01-02 23:04:26,953 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
-2023-01-02 23:24:56,561 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
-2023-01-02 23:44:50,665 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
-2023-01-02 23:45:38,097 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
-2023-01-02 23:46:11,397 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
-2023-01-02 23:47:08,414 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
-2023-01-02 23:48:28,339 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
-2023-01-02 23:51:38,909 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
-2023-01-03 00:12:30,967 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
-2023-01-03 00:13:04,002 ERROR: Exception on /user/susan [GET] [in C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1741]
+2023-01-03 18:41:32,772 ERROR: Exception on /user/john [GET] [in C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1741]
 Traceback (most recent call last):
   File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -26,34 +15,20 @@ Traceback (most recent call last):
   File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\routes.py", line 76, in user
-    return render_template('user.html', user=user, posts=posts, form=form)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\loaders.py", line 138, in load
-    code = environment.compile(source, name, filename)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 768, in compile
-    self.handle_exception(source=source_hint)
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\templates\user.html", line 27, in template
-    <form action="{{ url_for('unfollow', username=user.username) }}",  method="post">
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'unfollow'
-2023-01-03 00:14:08,976 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
-2023-01-03 00:14:24,363 ERROR: Exception on /user/susan [GET] [in C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1741]
+  File "C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\routes.py", line 78, in user
+    posts = current_user.followed_posts.all()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'all'
+2023-01-03 18:45:29,150 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
+2023-01-03 18:45:33,812 ERROR: Exception on /user/john [GET] [in C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\sql\base.py", line 1694, in _entity_namespace_key
+    return getattr(ns, key)
+           ^^^^^^^^^^^^^^^^
+AttributeError: type object 'Post' has no attribute 'username'
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
   File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -70,29 +45,82 @@ Traceback (most recent call last):
   File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\routes.py", line 76, in user
+  File "C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\routes.py", line 79, in user
+    posts = Post.query.filter_by(username=current_user.username)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\query.py", line 1806, in filter_by
+    clauses = [
+              ^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\orm\query.py", line 1807, in <listcomp>
+    _entity_namespace_key(from_entity, key) == value
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\sql\base.py", line 1696, in _entity_namespace_key
+    util.raise_(
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+sqlalchemy.exc.InvalidRequestError: Entity namespace for "post" has no property "username"
+2023-01-03 18:46:24,135 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
+2023-01-03 18:47:00,572 INFO: Microblog startup [in C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\__init__.py:48]
+2023-01-03 18:47:04,318 ERROR: Exception on /user/john [GET] [in C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\routes.py", line 71, in user
     return render_template('user.html', user=user, posts=posts, form=form)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\loaders.py", line 138, in load
-    code = environment.compile(source, name, filename)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 768, in compile
-    self.handle_exception(source=source_hint)
-  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\templates\user.html", line 27, in template
-    <form action="{{ url_for('unfollow', username=user.username) }}"  method="post">
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'unfollow'
+                                                                     ^^^^
+NameError: name 'form' is not defined
+2023-01-03 18:47:26,705 ERROR: Exception on /index [GET] [in C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\routes.py", line 21, in index
+    posts = current_user.followed_posts.all()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'all'
+2023-01-03 18:47:27,463 ERROR: Exception on /user/john [GET] [in C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FaheemNoorani\PycharmProjects\GiftExchange\app\routes.py", line 71, in user
+    return render_template('user.html', user=user, posts=posts, form=form)
+                                                                     ^^^^
+NameError: name 'form' is not defined
