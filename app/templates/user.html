@@ -33,4 +33,10 @@
   {% for post in posts %}
     {% include '_post.html' %}
   {% endfor %}
+  {% if next_num %}
+  <a href="{{ next_num }}">Older Posts</a>
+  {% endif %}
+  {% if prev_num %}
+  <a href="{{ prev_num }}">Newer Posts</a>
+  {% endif %}
 {% endblock %}
